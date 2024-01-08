@@ -1,0 +1,31 @@
+.mdiv {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: aqua;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://www.picsartphotoediting.com/wp-content/uploads/2020/07/a.k-editz-background-1-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button:hover {
+  background-color: rgb(180, 11, 198);
+  border-radius: 70px;
+  transition-duration: 5.1s;
+  transform-style: unset;
+
+  height: 25px;
+  position: relative;
+  position: flex;
+  transform-origin: 2px;
+}
+.Fontt {
+  border-radius: 50px;
+  background-color: rgb(241, 115, 230);
+  height: 25px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mdiv">
+        <div class="text">
+            <h1 align="center" style="color:rgb(244, 60, 186)">Text Editor</h1>
+            <div>
+                <form>
+                    <textarea rows="10" align="center" cols="60" placeholder="Enter The Text " id="txt"
+                        onkeypress="updateInfo()" autofocus></textarea>
+                    <br><br>
+                    <button type="button" onclick="upperCase()">UPPERCASE</button>
+                    <button type="button" onclick="lowerCase()">LOWERCASE</button>
+                    <button type="button" onclick="bold()">Bold</button>
+                    <button type="button" onclick="search()">search</button>
+                    <button type="button" onclick="alignRight()">ALIGN RIGHT</button>
+                    <br><br>
+                    <select class="Fontt">
+                        <option>CURSIVE</option>
+                        <option>SANS SERIF</option>
+                        <option>ITALIC</option>
+                    </select>
+
+
+                    <br><br>
+                    <h3 style="background-color:rgb(243, 71, 206); color: rgb(1, 7, 11);" id="info">The Text Contains 0
+                        And Word Is 0 Character</h3>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let txt = document.getElementById("txt");
+        let info = document.getElementById("info");
+        function upperCase() {
+            txt.value = txt.value.toUpperCase();
+        }
+        function lowerCase() {
+            txt.value = txt.value.toLowerCase();
+        }
+        function bold() {
+            txt.style.fontWeight = "bolder"
+        }
+        function alignRight() {
+            txt.style.textAlign = "Right";
+        }
+        function updateInfo() {
+            let text = txt.value;
+            info.innerHTML = `The Text Contains${text.split(' ').length} Word And Is ${text.length} Character`
+        }
+        function search() {
+            let str = prompt("Enter The Word And Check It Is Present Or Not");
+            let text = txt.value;
+            if (text.includes(str)) {
+                alert(`yes ${str} is Present in Text`);
+
+            }
+            else {
+                alert(`${str} IS Not Present`)
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
